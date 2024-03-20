@@ -1,0 +1,10 @@
+#!/bin/bash
+yum update -y
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
+sudo su
+cd /var/www/html/
+wget https://webspacedemo.s3.ap-south-1.amazonaws.com/upload.zip
+unzip upload
+mv upload/* .

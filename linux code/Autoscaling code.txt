@@ -1,0 +1,16 @@
+#!/bin/bash
+# User data for new EC2 instances
+# install httpd (Linux 2 version)
+yum update -y
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
+echo "<h1>Hello World! This is $(hostname -f)</h1>"> /var/www/html/index.html
+
+
+#!/bin/bash
+yum update -y
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
+echo “Hello World from $(hostname -f)” > /var/www/html/index.html

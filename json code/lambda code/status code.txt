@@ -1,0 +1,11 @@
+def lambda_handler(event, context):
+    print("I am lambda handler")
+    resp={
+        "statusCode": 200,
+        "headers":{
+            "Access-Control-Allow-Origin":"*",
+        },
+        "body": "isysway"
+    }
+    return resp
+
